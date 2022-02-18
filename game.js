@@ -4,6 +4,13 @@ var userClickedPattern = [];
 var level = 0;
 var started = false;
 
+$(".start-game").click(function () {
+	if (started != true) {
+		newSequence();
+		started = true;
+	}
+});
+
 $(document).keypress(function () {
 	if (started != true) {
 		newSequence();
@@ -33,6 +40,7 @@ function checkAnswer(currentLevel) {
 	} else {
 		playSound("wrong");
 		$("body").toggleClass("game-over");
+		$(".start-game").text("Start Again");
 
 		setTimeout(function () {
 			$("body").toggleClass("game-over");

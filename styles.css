@@ -37,6 +37,13 @@ p {
 	border-radius: 20%;
 }
 
+.start-game {
+	padding: 5px 8px;
+	border: none;
+	background-color: rgb(0, 37, 61);
+	color: #fff;
+	font-size: 1rem;
+}
 .game-over {
 	background-color: red;
 	opacity: 0.8;
